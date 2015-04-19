@@ -150,21 +150,6 @@ void WeaveArray::onCallBack (UsineMessage* Message)
 
             if((paramIndex == 0 || paramIndex == 1) && Message->lParam == MSG_CHANGE)
             {
-                /*
-                int tmp1,tmp2;
-                tmp1 = sdkGetEvtSize(waInput1);
-                tmp2 = sdkGetEvtSize(waInput2);
-                if (tmp1 != input1Length || tmp2 != input2Length)
-                {
-                    input1Length = tmp1;
-                    input2Length = tmp2;
-                    outputLength = input1Length + input2Length;
-                    for( int i=0; i < outputLength; i++)
-                    {
-                        sdkSetEvtArrayData(waOutput, i, 0);
-                    }
-                }
-                */
                 input1Length = sdkGetEvtSize(waInput1);
                 input2Length = sdkGetEvtSize(waInput2);
                 outputLength = input1Length + input2Length;
