@@ -1,0 +1,1968 @@
+[WK]
+VERSION=71
+CNT=1
+
+[PLOTSE]
+UID=10454731
+show dimmer=1
+show plot button 1=1
+show plot button 2=1
+
+[PLOT]
+UID=10454731
+VISIBLE=0
+MINIMIZED=0
+
+[PLOTPLOT0SE]
+snap to grid=1
+grid size=7
+enabled=1
+caption=plot 1
+universe num=0
+DMX device=1
+
+[PLOTPLOT0]
+UID=10455410
+VISIBLE=0
+MINIMIZED=0
+NBOBJECTS=0
+
+[PLOTPLOT0FORM]
+LEFT=433
+TOP=132
+CLIENTWIDTH=500
+CLIENTHEIGHT=500
+
+[PLOTPLOT01SE]
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+time code=0
+osc tag order=1
+osc mode=0
+
+[PLOTPLOT1SE]
+snap to grid=1
+grid size=7
+enabled=1
+caption=plot 2
+universe num=0
+DMX device=1
+
+[PLOTPLOT1]
+UID=11050368
+VISIBLE=0
+MINIMIZED=0
+NBOBJECTS=0
+
+[PLOTPLOT1FORM]
+LEFT=433
+TOP=132
+CLIENTWIDTH=500
+CLIENTHEIGHT=500
+
+[PLOTPLOT12SE]
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+time code=0
+osc tag order=1
+osc mode=0
+
+[WKRAD1INSE]
+UID=46723023
+zoom scale=1
+minimized=0
+HeightBeforeMinimize=0
+WidthBeforeMinimize=0
+saved in preset=1
+show vu-meter and gain=0
+
+[WKRAD1IN]
+UID=46723023
+VISIBLE=0
+MINIMIZED=0
+CNT=0
+
+[WKRAD1INTBMINIMIZESE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKRAD1INGAINgainSE]
+UID=46723367
+name=1
+saved in preset=1
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+osc tag order=1
+osc mode=0
+range min=0
+range max=1
+curve=2
+coeff=1
+auto record on click=0
+
+[WKRAD1INGAIN]
+Vgain=0
+
+[WKRAD1OUTSE]
+UID=46762143
+zoom scale=1
+minimized=0
+HeightBeforeMinimize=0
+WidthBeforeMinimize=0
+saved in preset=1
+show on/off=1
+show mute=1
+show solo=1
+show vu-meter and gain=1
+
+[WKRAD1OUT]
+UID=46762143
+VISIBLE=0
+MINIMIZED=0
+CNT=1
+ENABLED0=1
+MINI0=1
+SPA0=Stereo Out
+
+[WKRAD1OUTTBMINIMIZESE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKRAD1OUTGAINgainSE]
+UID=46762406
+name=1
+saved in preset=1
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+osc tag order=1
+osc mode=0
+range min=0
+range max=1
+curve=2
+coeff=1
+auto record on click=0
+
+[WKRAD1OUTGAIN]
+Vgain=0
+
+[WKRAD1OUTSOLOSSE]
+UID=46788955
+saved in preset=1
+inverse=0
+quantize=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+auto record on click=0
+
+[WKRAD1OUTSOLO]
+VS=0
+
+[WKRAD1OUTMUTEMSE]
+UID=46788846
+saved in preset=1
+inverse=0
+quantize=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+auto record on click=0
+
+[WKRAD1OUTMUTE]
+VM=0
+
+[WKRAD1OUTONOFFonSE]
+UID=46788365
+saved in preset=1
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+auto record on click=0
+
+[WKRAD1OUTONOFF]
+Von=1
+
+[WKRAD1OUTGAIN0gainSE]
+UID=46792476
+touch hi precision=0
+precision factor=8
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+osc tag order=1
+osc mode=0
+range min=0
+range max=1
+curve=2
+coeff=1
+auto record on click=0
+
+[WKRAD1OUTGAIN0]
+Vgain=0
+
+[WKRAD1OUTMUTE0MSE]
+UID=46792709
+inverse=0
+quantize=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+auto record on click=0
+
+[WKRAD1OUTMUTE0]
+VM=0
+
+[WKRAD1OUTSOLO0SSE]
+UID=46793188
+inverse=0
+quantize=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKRAD1OUTSOLO0]
+VS=0
+
+[WKRAD1OUTPRE0preSE]
+UID=46792955
+inverse=0
+quantize=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+auto record on click=0
+
+[WKRAD1OUTPRE0]
+Vpre=0
+
+[WKPRESETSSE]
+UID=8786614
+edit enabled=1
+on top=0
+opacity=1
+blur softness=0
+vertical=0
+rotation angle=0
+zoom scale=1
+transparent=0
+background color=50
+frames count=1
+frames alignment=0
+fit size=1
+show border=1
+border color=34
+border width=0
+rounded=0
+round size=0
+show caption=1
+caption font color=6
+caption font size factor=0.600000023841858
+caption align=1
+caption font bold=0
+caption font italic=0
+caption font underline=0
+show header=1
+header height=20
+header color=34
+minimized=0
+HeightBeforeMinimize=0
+WidthBeforeMinimize=0
+button color=36
+button font color=6
+button border color=34
+show border cmd=0
+cmd ON color=3
+cmd OFF color=36
+cmd font ON color=6
+cmd font OFF color=6
+cmd border ON color=34
+cmd border OFF color=34
+silent edit=0
+
+[WKPRESETS]
+UID=8786614
+VISIBLE=0
+MINIMIZED=0
+CURRENT CAPTION=
+CURRENT NUM=0
+
+[WKPRESETSTBMINIMIZESE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKPRESETSTBPREVIOUSSE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKPRESETSTBNEXTSE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKRA1SE]
+UID=46701096
+enabled=1
+on top=0
+opacity=1
+zoom scale=1
+transparent=0
+background color=4
+frames count=1
+frames alignment=0
+fit size=1
+show border=0
+border color=4
+border width=0
+rounded=0
+round size=0
+show caption=1
+caption font color=6
+caption font size factor=0.600000023841858
+caption align=1
+caption font bold=0
+caption font italic=0
+caption font underline=0
+show header=1
+header height=20
+header color=23
+minimized=0
+HeightBeforeMinimize=0
+WidthBeforeMinimize=0
+name=rack
+always calculated=0
+saved in preset=1
+rack input=1
+rack output=1
+presets panel=0
+show when active on grid=1
+fit grid line number=0
+rack type=0
+
+[WKRA1]
+UID=46701096
+VISIBLE=0
+MINIMIZED=0
+CNT=1
+
+[WKRA1TBENABLESE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKRA1TBMINIMIZESE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKRA1TBPRESETSE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKRA1PRESETSSE]
+UID=46701325
+edit enabled=1
+on top=0
+opacity=1
+blur softness=0
+vertical=0
+rotation angle=0
+zoom scale=1
+transparent=0
+background color=50
+frames count=1
+frames alignment=0
+fit size=1
+show border=1
+border color=34
+border width=0
+rounded=0
+round size=0
+show caption=1
+caption font color=6
+caption font size factor=0.600000023841858
+caption align=1
+caption font bold=0
+caption font italic=0
+caption font underline=0
+show header=1
+header height=20
+header color=34
+minimized=0
+HeightBeforeMinimize=0
+WidthBeforeMinimize=0
+button color=36
+button font color=6
+button border color=34
+show border cmd=0
+cmd ON color=3
+cmd OFF color=36
+cmd font ON color=6
+cmd font OFF color=6
+cmd border ON color=34
+cmd border OFF color=34
+silent edit=0
+
+[WKRA1PRESETS]
+UID=46701325
+VISIBLE=0
+MINIMIZED=0
+CURRENT CAPTION=
+CURRENT NUM=0
+
+[WKRA1PRESETSTBMINIMIZESE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKRA1PRESETSTBPREVIOUSSE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKRA1PRESETSTBNEXTSE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKRA1E1-]
+PATCHTYPE=0
+VERSION=71
+FNAM=
+ORIGINDEVICE=
+NBPG=9
+OFFSETX=158
+OFFSETY=-23
+UID=46796688
+ID0=95
+L0=209
+T0=186
+USR0=C:\00Hollyhock\persolivar\user modules\simplePendulum.usr-win64
+QIDX1=1
+ID1=262
+L1=420
+T1=258
+ID2=3
+L2=-34
+T2=155
+ID3=3
+L3=-38
+T3=196
+ID4=3
+L4=-38
+T4=237
+ID5=3
+L5=-42
+T5=275
+ID6=8
+L6=-36
+T6=326
+ID7=360
+L7=-175
+T7=424
+ID8=3
+L8=-313
+T8=473
+C0=0200010000000000
+CSRCNAME0=FADER 1
+CTARGNAME0=L1
+C1=0300010000000100
+CSRCNAME1=FADER 2
+CTARGNAME1=FRICTION
+C2=0400010000000200
+CSRCNAME2=FADER 3
+CTARGNAME2=GRAVITY
+C3=0500010000000300
+CSRCNAME3=FADER 4
+CTARGNAME3=SET FINAL POSITION
+C4=0600010000000400
+CSRCNAME4=BUTTON 5
+CTARGNAME4=CK_IN
+C5=0000050001000100
+CSRCNAME5=POSM1X
+CTARGNAME5=X-1
+C6=0000060001000200
+CSRCNAME6=POSM1Y
+CTARGNAME6=Y-1
+C7=0700030006000100
+CSRCNAME7=TRIGGER
+CTARGNAME7=BUTTON 5
+C8=0800010007000200
+CSRCNAME8=FADER 6
+CTARGNAME8=INTERVAL
+NBCO=9
+
+[WKRA1E1-PASE]
+name=patch
+where=0
+saved in preset=1
+can be randomized=1
+undo enabled=1
+shared=0
+presets panel=0
+enabled=1
+on top=0
+opacity=1
+left=2
+top=85
+width=110
+height=70
+zoom scale=1
+transparent=0
+background color=5
+frames count=1
+frames alignment=0
+fit size=1
+show border=0
+border color=5
+border width=0
+rounded=0
+round size=0
+show caption=1
+caption font color=6
+caption font size factor=0.600000023841858
+caption align=1
+caption font bold=0
+caption font italic=0
+caption font underline=0
+show header=1
+header height=20
+header color=5
+show toolbar=1
+toolbar size=16
+minimized=0
+HeightBeforeMinimize=0
+WidthBeforeMinimize=0
+snap to grid=1
+grid size=7
+auto resize=1
+
+[WKRA1E1-0]
+UID=63309755
+saved in preset=1
+VL1=0.5
+VFriction=0.000193548388779163
+VGravity=9.67741870880127
+Vset final position=0.283870965242386
+VposM1x=0.71999055147171
+VposM1y=0.0509964823722839
+VOffSet posM1x=0.71999055147171
+VOffSet posM1y=0.0509964823722839
+
+[WKRA1E1-0SE]
+UID=63309755
+saved in preset=1
+
+[WKRA1E1-1]
+UID=45803874
+saved in preset=1
+can be randomized=1
+select by=2
+INDEXvisible=1
+VX-1=0.634457409381866
+VY-1=0.0184180121868849
+VX-2=0.782842695713043
+VY-2=0.217157304286957
+Vnb objects=1
+Vmouse dwn=0
+Vdbl click=0
+Vmouse x=0.0718954280018806
+Vmouse y=0.67785233259201
+Vallow drop=0
+
+[WKRA1E1-1mouse dwnSE]
+UID=72672915
+
+[WKRA1E1-1dbl clickSE]
+UID=72673020
+
+[WKRA1E1-1mouse xSE]
+UID=72673095
+
+[WKRA1E1-1mouse ySE]
+UID=72673195
+
+[WKRA1E1-1CTRLSE]
+UID=72674430
+edit enabled=1
+on top=0
+opacity=1
+blur softness=0
+vertical=0
+rotation angle=0
+left=3
+top=23
+width=161
+height=161
+floating x=0
+floating y=0
+ignored in physical engine=0
+collide=0
+collide info=0
+speed x=0
+speed y=0
+angular speed=0
+transparent=0
+background color=50
+frames count=1
+frames alignment=0
+fit size=1
+show border=1
+border color=34
+border width=4
+rounded=0
+round size=0
+show caption=0
+caption font color=6
+caption font size factor=0.600000023841858
+caption align=1
+caption font bold=0
+caption font italic=0
+caption font underline=0
+show header=0
+header height=20
+header color=34
+show toolbar=1
+toolbar size=16
+auto record on click=0
+physics enabled=0
+physics speed=1
+gravity x=0
+gravity y=0
+friction=0
+elasticity=1
+reset pos x=0
+reset pos y=0
+init with random speed=1
+same masses=1
+select by=2
+
+[WKRA1E1-1CTRL]
+UID=72674430
+VISIBLE=0
+MINIMIZED=0
+NBOBJECTS=1
+
+[WKRA1E1-1CTRLS0SE]
+UID=72675934
+opacity=1
+blur softness=0
+rotation angle=0
+left=85.2105484008789
+top=10.2838335037231
+width=25
+height=25
+floating x=1
+floating y=1
+ignored in physical engine=0
+collide=0
+collide info=0
+speed x=0
+speed y=0.00845182035118342
+angular speed=0
+transparent=0
+background color=15
+frames count=1
+frames alignment=0
+fit size=1
+show border=1
+border color=15
+border width=2
+show caption=1
+caption font color=6
+caption font size factor=0.600000023841858
+caption font bold=0
+caption font italic=0
+caption font underline=0
+auto record on click=0
+shape type=1
+caption=1
+
+[WKRA1E1-1CTRLS0]
+UID=72675934
+VISIBLE=0
+MINIMIZED=0
+
+[WKRA1E1-2]
+UID=16124077
+saved in preset=1
+can be randomized=1
+INDEXvisible=1
+Vfader=0.5
+Vmin=0.00999999977648258
+Vmax=0.5
+Tcaption=L1
+COLcolor=12
+INDEXprec=5
+INDEXlogscale=0
+Vdefault val=0.25
+Vinc/dec val=1
+Vmouse dwn=0
+Vdbl click=0
+Vmouse x=0.21290323138237
+Vmouse y=0.409090906381607
+Vauto reset=0
+Vallow drop=0
+
+[WKRA1E1-2faderSE]
+UID=16124863
+edit enabled=1
+on top=0
+opacity=1
+blur softness=0
+vertical=0
+rotation angle=0
+left=3
+top=190
+width=161
+height=28
+floating x=0
+floating y=0
+ignored in physical engine=0
+collide=0
+collide info=0
+speed x=0
+speed y=0
+angular speed=0
+transparent=0
+background color=50
+frames count=1
+frames alignment=0
+fit size=1
+show border=1
+border color=34
+border width=3
+rounded=0
+round size=0
+show caption=1
+caption font color=6
+caption font size factor=1
+caption align=1
+caption font bold=0
+caption font italic=0
+caption font underline=0
+text align=1
+show fader=1
+fader color=12
+dashed fader=1
+show cursor=1
+cursor color=52
+cursor width=4
+show value=1
+value font color=6
+value font size factor=1
+touch hi precision=0
+precision factor=8
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+osc tag order=1
+osc mode=0
+range min=0
+range max=1
+curve=2
+coeff=1
+auto record on click=0
+
+[WKRA1E1-2mouse dwnSE]
+UID=16126348
+
+[WKRA1E1-2dbl clickSE]
+UID=16126444
+
+[WKRA1E1-2mouse xSE]
+UID=16126540
+
+[WKRA1E1-2mouse ySE]
+UID=16126602
+
+[WKRA1E1-3]
+UID=615037
+saved in preset=1
+can be randomized=1
+INDEXvisible=1
+Vfader=0.000193548388779163
+Vmin=0
+Vmax=0.00999999977648258
+Tcaption=Friction
+COLcolor=12
+INDEXprec=5
+INDEXlogscale=0
+Vdefault val=0.00800000037997961
+Vinc/dec val=1
+Vmouse dwn=0
+Vdbl click=0
+Vmouse x=0.0516129024326801
+Vmouse y=1
+Vauto reset=0
+Vallow drop=0
+
+[WKRA1E1-3faderSE]
+UID=615794
+edit enabled=1
+on top=0
+opacity=1
+blur softness=0
+vertical=0
+rotation angle=0
+left=3
+top=224
+width=161
+height=28
+floating x=0
+floating y=0
+ignored in physical engine=0
+collide=0
+collide info=0
+speed x=0
+speed y=0
+angular speed=0
+transparent=0
+background color=50
+frames count=1
+frames alignment=0
+fit size=1
+show border=1
+border color=34
+border width=3
+rounded=0
+round size=0
+show caption=1
+caption font color=6
+caption font size factor=1
+caption align=1
+caption font bold=0
+caption font italic=0
+caption font underline=0
+text align=1
+show fader=1
+fader color=12
+dashed fader=1
+show cursor=1
+cursor color=52
+cursor width=4
+show value=1
+value font color=6
+value font size factor=1
+touch hi precision=0
+precision factor=8
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+osc tag order=1
+osc mode=0
+range min=0
+range max=1
+curve=2
+coeff=1
+auto record on click=0
+
+[WKRA1E1-3mouse dwnSE]
+UID=616859
+
+[WKRA1E1-3dbl clickSE]
+UID=616925
+
+[WKRA1E1-3mouse xSE]
+UID=616974
+
+[WKRA1E1-3mouse ySE]
+UID=617024
+
+[WKRA1E1-4]
+UID=7321632
+saved in preset=1
+can be randomized=1
+INDEXvisible=1
+Vfader=9.67741870880127
+Vmin=0
+Vmax=100
+Tcaption=Gravity
+COLcolor=12
+INDEXprec=3
+INDEXlogscale=0
+Vdefault val=0.981000006198883
+Vinc/dec val=1
+Vmouse dwn=0
+Vdbl click=0
+Vmouse x=0.283870965242386
+Vmouse y=0.227272734045982
+Vauto reset=0
+Vallow drop=0
+
+[WKRA1E1-4faderSE]
+UID=7322333
+edit enabled=1
+on top=0
+opacity=1
+blur softness=0
+vertical=0
+rotation angle=0
+left=3
+top=258
+width=161
+height=28
+floating x=0
+floating y=0
+ignored in physical engine=0
+collide=0
+collide info=0
+speed x=0
+speed y=0
+angular speed=0
+transparent=0
+background color=50
+frames count=1
+frames alignment=0
+fit size=1
+show border=1
+border color=34
+border width=3
+rounded=0
+round size=0
+show caption=1
+caption font color=6
+caption font size factor=1
+caption align=1
+caption font bold=0
+caption font italic=0
+caption font underline=0
+text align=1
+show fader=1
+fader color=12
+dashed fader=1
+show cursor=1
+cursor color=52
+cursor width=4
+show value=1
+value font color=6
+value font size factor=1
+touch hi precision=0
+precision factor=8
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+osc tag order=1
+osc mode=0
+range min=0
+range max=1
+curve=2
+coeff=1
+auto record on click=0
+
+[WKRA1E1-4mouse dwnSE]
+UID=7323681
+
+[WKRA1E1-4dbl clickSE]
+UID=7323760
+
+[WKRA1E1-4mouse xSE]
+UID=7323830
+
+[WKRA1E1-4mouse ySE]
+UID=7323892
+
+[WKRA1E1-5]
+UID=92416739
+saved in preset=1
+can be randomized=1
+INDEXvisible=1
+Vfader=0.283870965242386
+Vmin=0
+Vmax=1
+Tcaption=g_angle
+COLcolor=12
+INDEXprec=5
+INDEXlogscale=0
+Vdefault val=0
+Vinc/dec val=1
+Vmouse dwn=0
+Vdbl click=0
+Vmouse x=0.283870965242386
+Vmouse y=0.136363640427589
+Vauto reset=0
+Vallow drop=0
+
+[WKRA1E1-5faderSE]
+UID=92417487
+edit enabled=1
+on top=0
+opacity=1
+blur softness=0
+vertical=0
+rotation angle=0
+left=3
+top=292
+width=161
+height=28
+floating x=0
+floating y=0
+ignored in physical engine=0
+collide=0
+collide info=0
+speed x=0
+speed y=0
+angular speed=0
+transparent=0
+background color=50
+frames count=1
+frames alignment=0
+fit size=1
+show border=1
+border color=34
+border width=3
+rounded=0
+round size=0
+show caption=1
+caption font color=6
+caption font size factor=1
+caption align=1
+caption font bold=0
+caption font italic=0
+caption font underline=0
+text align=1
+show fader=1
+fader color=12
+dashed fader=1
+show cursor=1
+cursor color=52
+cursor width=4
+show value=1
+value font color=6
+value font size factor=1
+touch hi precision=0
+precision factor=8
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+osc tag order=1
+osc mode=0
+range min=0
+range max=1
+curve=2
+coeff=1
+auto record on click=0
+
+[WKRA1E1-5mouse dwnSE]
+UID=92418539
+
+[WKRA1E1-5dbl clickSE]
+UID=92418606
+
+[WKRA1E1-5mouse xSE]
+UID=92418659
+
+[WKRA1E1-5mouse ySE]
+UID=92418708
+
+[WKRA1E1-6]
+UID=81863462
+INDEXvisible=1
+Tcaption=ck_in
+COLcolor=36
+VOFF value=0
+VON value=1
+Vnull evt if OFF=0
+Vmouse dwn=0
+Vdbl click=0
+Vmouse x=0.946666657924652
+Vmouse y=0.0833333358168602
+Vallow drop=0
+COLLAPS=1
+
+[WKRA1E1-6buttonSE]
+UID=81864159
+edit enabled=0
+on top=0
+opacity=1
+blur softness=0
+vertical=0
+rotation angle=0
+left=3
+top=380
+width=77
+height=14
+floating x=0
+floating y=0
+ignored in physical engine=0
+collide=0
+collide info=0
+speed x=0
+speed y=0
+angular speed=0
+transparent=0
+background color=36
+frames count=1
+frames alignment=0
+fit size=1
+show border=0
+border color=34
+border width=1
+rounded=0
+round size=0
+show caption=1
+caption font color=6
+caption font size factor=0.899999976158142
+caption align=0
+caption font bold=0
+caption font italic=0
+caption font underline=0
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+time code=0
+osc tag order=1
+osc mode=0
+auto record on click=0
+
+[WKRA1E1-6mouse dwnSE]
+UID=81864616
+
+[WKRA1E1-6dbl clickSE]
+UID=81864682
+
+[WKRA1E1-6mouse xSE]
+UID=81864731
+
+[WKRA1E1-6mouse ySE]
+UID=81864785
+
+[WKRA1E1-7]
+UID=4859230
+Von=1
+INDEXsync=0
+Vinterval=5.32308435440063
+
+[WKRA1E1-8]
+UID=95777833
+saved in preset=1
+can be randomized=1
+INDEXvisible=1
+Vfader=5.32308435440063
+Vmin=0
+Vmax=100000
+Tcaption=interval
+Tsymbol= ms
+COLcolor=12
+INDEXprec=5
+INDEXlogscale=1
+Vdefault val=0
+Vinc/dec val=1
+Vmouse dwn=0
+Vdbl click=0
+Vmouse x=0.361290335655212
+Vmouse y=0
+Vauto reset=0
+Vallow drop=0
+COLLAPS=1
+
+[WKRA1E1-8faderSE]
+UID=95778534
+edit enabled=1
+on top=0
+opacity=1
+blur softness=0
+vertical=0
+rotation angle=0
+left=3
+top=400
+width=161
+height=28
+floating x=0
+floating y=0
+ignored in physical engine=0
+collide=0
+collide info=0
+speed x=0
+speed y=0
+angular speed=0
+transparent=0
+background color=50
+frames count=1
+frames alignment=0
+fit size=1
+show border=1
+border color=34
+border width=3
+rounded=0
+round size=0
+show caption=1
+caption font color=6
+caption font size factor=1
+caption align=1
+caption font bold=0
+caption font italic=0
+caption font underline=0
+text align=1
+show fader=1
+fader color=12
+dashed fader=1
+show cursor=1
+cursor color=52
+cursor width=4
+show value=1
+value font color=6
+value font size factor=1
+touch hi precision=0
+precision factor=8
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+osc tag order=1
+osc mode=0
+range min=0
+range max=1
+curve=2
+coeff=1
+auto record on click=0
+
+[WKRA1E1-8mouse dwnSE]
+UID=95779852
+
+[WKRA1E1-8dbl clickSE]
+UID=95779965
+
+[WKRA1E1-8mouse xSE]
+UID=95780027
+
+[WKRA1E1-8mouse ySE]
+UID=95780080
+
+[WKRA1E1-CPSE]
+enabled=1
+on top=0
+opacity=1
+left=2
+top=85
+width=110
+height=70
+zoom scale=1
+transparent=0
+background color=5
+frames count=1
+frames alignment=0
+fit size=1
+show border=0
+border color=5
+border width=0
+rounded=0
+round size=0
+show caption=1
+caption font color=6
+caption font size factor=0.600000023841858
+caption align=1
+caption font bold=0
+caption font italic=0
+caption font underline=0
+show header=1
+header height=20
+header color=5
+show toolbar=1
+toolbar size=16
+minimized=0
+HeightBeforeMinimize=0
+WidthBeforeMinimize=0
+snap to grid=1
+grid size=7
+auto resize=1
+name=patch
+where=0
+saved in preset=1
+can be randomized=1
+undo enabled=1
+shared=0
+presets panel=0
+
+[WKRA1E1-CPTOOLBARTBENABLESE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKRA1E1-CPTOOLBARTBMINIMIZESE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[WKRA1E1-CPTOOLBARTBPRESETSE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+[GRIDSE]
+zoom scale=1
+number of lines=4
+load next playlist=0
+auto play grid at startup=1
+show grid at startup=0
+
+[GRID]
+UID=8078640
+VISIBLE=0
+MINIMIZED=0
+enabled=1
+NBLINES=4
+NBROWS=4
+HEIGHT=200
+CNT=0
+
+[GRIDFORM]
+LEFT=333
+TOP=282
+CLIENTWIDTH=700
+CLIENTHEIGHT=200
+
+[GRIDBTN-0SE]
+zoom scale=1
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+time code=0
+osc tag order=1
+osc mode=0
+loop=1
+repeat=1
+duration=4
+format=4
+restart synchro=1
+set tempo=0
+tempo=120
+next mode=0
+next section number=0
+background color=36
+width=132
+
+[GRIDBTN-1SE]
+zoom scale=1
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+time code=0
+osc tag order=1
+osc mode=0
+loop=1
+repeat=1
+duration=4
+format=4
+restart synchro=1
+set tempo=0
+tempo=120
+next mode=0
+next section number=0
+background color=36
+width=132
+
+[GRIDBTN-2SE]
+zoom scale=1
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+time code=0
+osc tag order=1
+osc mode=0
+loop=1
+repeat=1
+duration=4
+format=4
+restart synchro=1
+set tempo=0
+tempo=120
+next mode=0
+next section number=0
+background color=36
+width=132
+
+[GRIDBTN-3SE]
+zoom scale=1
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+time code=0
+osc tag order=1
+osc mode=0
+loop=1
+repeat=1
+duration=4
+format=4
+restart synchro=1
+set tempo=0
+tempo=120
+next mode=0
+next section number=0
+background color=36
+width=132
+
+[SCROLLERDESIGNSE]
+opacity=0.5
+background color=4
+height=15
+
+[SCROLLERDESIGN]
+UID=8916653
+VISIBLE=0
+MINIMIZED=0
+
+[SCROLLERIBSE]
+opacity=0.5
+background color=4
+height=15
+
+[SCROLLERIB]
+UID=8953866
+VISIBLE=0
+MINIMIZED=0
+
+[IBSE]
+zoom scale=1
+snap to grid=0
+grid size=7
+auto reorganize=0
+transparent=0
+background color=40
+frames count=1
+frames alignment=0
+fit size=1
+
+[IB]
+UID=8953453
+VISIBLE=0
+MINIMIZED=0
+
+[MIXER]
+UID=8533417
+VISIBLE=0
+MINIMIZED=0
+COUNT=0
+
+[MIXERFORM]
+LEFT=610
+TOP=282
+CLIENTWIDTH=145
+CLIENTHEIGHT=200
+
+[GLOBSYNCSE]
+UID=5136408
+saved in preset=1
+bar list=4/4,4/4
+auto restart=0
+perfect synchro=0
+linked to main ON/OFF=1
+large scale=0
+frame rate=24
+auto start main engine=1
+smpte offset=0
+show on/off=1
+show tempo=1
+show smpte=1
+show cycle position=1
+show bar position=1
+show restart=1
+show multiply by 2=1
+show divide by 2=1
+show tap tempo=1
+
+[GLOBSYNC]
+UID=5136408
+VISIBLE=0
+MINIMIZED=0
+
+[GLOBSYNCTEMPOtempoSE]
+touch hi precision=1
+precision factor=8
+inverse=0
+quantize=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+osc tag order=1
+osc mode=0
+range min=0
+range max=1
+curve=2
+coeff=1
+
+[GLOBSYNCTEMPO]
+Vtempo=48.6206893920898
+
+[VIDEOSE]
+UID=5486997
+show video=1
+show fullscreen=1
+show on/off=1
+show restart=1
+show loop=1
+show pause=1
+show master smpte=1
+show position=1
+show start pos=0
+show end pos=0
+
+[VIDEO]
+UID=5486997
+VISIBLE=0
+MINIMIZED=0
+
+[VIDEOONOFFONSE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[VIDEOONOFF]
+VON=0
+
+[VIDEOLOOPloopSE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[VIDEOLOOP]
+Vloop=0
+
+[VIDEOLOOPSTARTcaption_start_positionSE]
+touch hi precision=0
+precision factor=8
+
+[VIDEOLOOPSTART]
+Vcaption_start_position=0
+
+[VIDEOLOOPENDcaption_end_positionSE]
+touch hi precision=0
+precision factor=8
+
+[VIDEOLOOPEND]
+Vcaption_end_position=0
+
+[VIDEOPAUSEpauseSE]
+inverse=0
+mode=2
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+key mode=1
+mouse mode=1
+osc tag order=1
+osc mode=0
+
+[VIDEOPAUSE]
+Vpause=0
+
+[VIDEORESTARTrestartSE]
+inverse=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+time code=0
+osc tag order=1
+osc mode=0
+
+[VIDEOFULLSCREENfullscreenSE]
+inverse=0
+mode=0
+channel=1
+control type=0
+control num=0
+motorized=0
+mackie mode=0
+only if rack is on=0
+soft take over=0
+short cut=0
+time code=0
+osc tag order=1
+osc mode=0
+
+[DIRECTTODISKSE]
+zoom scale=1
+record format=0
+
+[DIRECTTODISK]
+UID=27310535
+VISIBLE=0
+MINIMIZED=0
+ITEM-0=Stereo Out
+COUNT=1
+
+[DIRECTTODISKFORM]
+LEFT=607
+TOP=335
+CLIENTWIDTH=152
+CLIENTHEIGHT=95
