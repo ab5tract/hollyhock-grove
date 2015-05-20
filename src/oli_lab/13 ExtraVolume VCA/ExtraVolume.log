@@ -1,0 +1,13 @@
+﻿La génération a démarré 25/04/2015 18:27:15.
+     1>Projet "C:\00Hollyhock\persolivar\developpement USINE\SDK HH2 6\modules olilab\ExtraVolume\ExtraVolume.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(356,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(357,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /MP /Od /Oy- /D _DEBUG /D _WINDOWS /D _WINDLL /D _MBCS /Gm- /EHa /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo".\\" /Fd".\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt extraVolume.cpp
+         extraVolume.cpp
+     1>extraVolume.cpp(51): fatal error C1083: Impossible d'ouvrir le fichier include : 'AudioVolumeExample.h' : No such file or directory
+     1>Génération du projet "C:\00Hollyhock\persolivar\developpement USINE\SDK HH2 6\modules olilab\ExtraVolume\ExtraVolume.vcxproj" terminée (Build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:00.18
