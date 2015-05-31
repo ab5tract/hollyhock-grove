@@ -53,7 +53,7 @@
 //-----------------------------------------------------------------------------
 // includes
 //-----------------------------------------------------------------------------
-#include "../../sdk/UserDefinitions.h"  
+#include "UserDefinitions.h"  
 //#include <sstream>
 //#include <iostream>
 //#include <cmath>

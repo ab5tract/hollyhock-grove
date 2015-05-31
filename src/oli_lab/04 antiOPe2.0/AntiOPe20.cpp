@@ -187,7 +187,9 @@ void AntiOPe20::onCallBack(UsineMessage *Message)
 					sdkSetEvtData(m_SendOrderToOSCModule, 1);
 					//wait one cycle here
 					sdkTraceChar("sending to MINITEL");
-					_sleep(160);
+                    // replaced Windows-specific _sleep for the std-library version.
+                    // as such, this module requires OS X 10.7 on Mac.
+					std::this_thread::sleep_for( std::chrono::milliseconds(160) );
 					sdkSetEvtData(m_SendOrderToOSCModule, 0);
 					}
 				else{}

@@ -51,7 +51,7 @@
 //-----------------------------------------------------------------------------
 // includes
 //-----------------------------------------------------------------------------
-#include "../../sdk/UserDefinitions.h"  
+#include "UserDefinitions.h"  
 #include <iostream>
 //#define _USE_MATH_DEFINES
 //#include <cmath>
@@ -113,7 +113,7 @@ public:
 	void onCallBack (UsineMessage *Message);
 	void onProcess ();
 
-	void rotationMatrix::computeNewCoordinates();//(TPrecision rotationAngle, TPrecision x, TPrecision y);
+	void computeNewCoordinates();//(TPrecision rotationAngle, TPrecision x, TPrecision y);
 
 	//-----------------------------------------------------------------------------
 	// midi out callbacks
