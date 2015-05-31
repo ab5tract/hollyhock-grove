@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E5BDA322-E993-4A6E-9B2A-F5AA9A086159</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ColorSelector</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5E25689580AF5AFE51EE7258C19D829A3FEB39DE</key>
+		<string>github.com:ab5tract/hollyhock-grove.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>src/23fx23/Color_Selector/ColorSelector.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5E25689580AF5AFE51EE7258C19D829A3FEB39DE</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:ab5tract/hollyhock-grove.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5E25689580AF5AFE51EE7258C19D829A3FEB39DE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5E25689580AF5AFE51EE7258C19D829A3FEB39DE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hollyhock-grove</string>
+		</dict>
+	</array>
+</dict>
+</plist>
