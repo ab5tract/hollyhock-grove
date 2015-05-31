@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4182DED4-4829-42A8-A17E-4D85A0B19BD3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SimplePendulum</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5E25689580AF5AFE51EE7258C19D829A3FEB39DE</key>
+		<string>github.com:ab5tract/hollyhock-grove.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>src/oli_lab/11 OliLabIncrementor3/SimplePendulum.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5E25689580AF5AFE51EE7258C19D829A3FEB39DE</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:ab5tract/hollyhock-grove.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5E25689580AF5AFE51EE7258C19D829A3FEB39DE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5E25689580AF5AFE51EE7258C19D829A3FEB39DE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hollyhock-grove</string>
+		</dict>
+	</array>
+</dict>
+</plist>
