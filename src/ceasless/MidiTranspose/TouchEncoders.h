@@ -1,18 +1,18 @@
 //-----------------------------------------------------------------------------
 //@file  
-//	simplePendulum.h
+//	TouchEncoders.h
 //
 //@author
-//	Olivar Premier
+//	Martin FLEURENT aka 'martignasse'
 //
 //@brief 
-//	Definitions of the helloWorldModule class.
+//	Definitions of the TouchEncoders class.
 //
-//  A template include to start from for new user module.
+//  Example user module to show how to process midi messages.
 //
 //@historic 
-//	2013/05/15
-//    first release for Hollyhock CPP SDK 6.00.226 
+//	2015/02/23
+//    first release for Hollyhock CPP SDK 6.04.001
 //
 //@IMPORTANT
 //	This file is part of the Usine Hollyhock CPP SDK
@@ -23,7 +23,7 @@
 // All dependencies are under there own licence.
 //
 //@LICENCE
-// Copyright (C) 2013 Sensomusic
+// Copyright (C) 2013, 2014, 2015 Sensomusic
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy of 
 // this software and associated documentation files (the "Software"), 
@@ -46,44 +46,37 @@
 //-----------------------------------------------------------------------------
 
 // include once, no more
-#ifndef __SIMPLE_PENDULUM_MODULE_H__
-#define __SIMPLE_PENDULUM_MODULE_H__
+#ifndef __RGBA_COLOR_MODULE_H__
+#define __RGBA_COLOR_MODULE_H__
+
 //-----------------------------------------------------------------------------
 // includes
 //-----------------------------------------------------------------------------
-#include "UserDefinitions.h"
-//#include <iostream>
-//#include <cmath>
-//#include <limits>
+#include "UserDefinitions.h"  
+#include <iostream>
+#include <cmath>
+#include <limits>
 
-//-----------------------------------------------------------------------------
-// defines and constantes
-//-----------------------------------------------------------------------------
-
-// defines and constantes goes here 
-
-//-----------------------------------------------------------------------------
-// structures and typedef
-//-----------------------------------------------------------------------------
-
-// structures and typedef goes here
+using namespace std;
 
 //-----------------------------------------------------------------------------
 // class definition
 //-----------------------------------------------------------------------------
-class SimplePendulum : public UserModuleBase
+class TouchEncoders : public UserModuleBase
 {
+	//-------------------------------------------------------------------------
 	// module constructors/destructors
 	//-------------------------------------------------------------------------
 public:
-	// constructor
-	SimplePendulum();
+    // constructor
+    TouchEncoders(){};
 
-	// destructor
-	virtual ~SimplePendulum();
+    // destructor
+	virtual ~TouchEncoders(){};
+
 	//-------------------------------------------------------------------------
 	// public methodes inherited from UserModule
-	//-------------------------------------------------------------------------
+	//------------------------------------------------------------------------
 public:
 	//-----------------------------------------------------------------------------
 	// module info
@@ -91,96 +84,74 @@ public:
 
 	//-----------------------------------------------------------------------------
 	// query system and init
-	int  onGetNumberOfParams( int QIdx);
-	void onAfterQuery (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo, int QIdx);
-	void onInitModule (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo);
+	//void onInitModule (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo);
 
 	//-----------------------------------------------------------------------------
 	// parameters and process
 	void onGetParamInfo (int ParamIndex, TParamInfo* pParamInfo);
 	void onSetEventAddress (int ParamIndex, UsineEventPtr pEvent);
-	void onCallBack (UsineMessage *Message);
+	//void onCallBack (UsineMessage *Message);
 	void onProcess ();
 
 	//-----------------------------------------------------------------------------
 	// midi out callbacks
-	void onMidiSendOut (int DeviceID, UsineMidiCode Code);
-	void onMidiSysexSendOut (int DeviceID, char* Sysex);
+	//void onMidiSendOut (int DeviceID, UsineMidiCode Code);
+	//void onMidiSysexSendOut (int DeviceID, char* Sysex);
 
 	//-----------------------------------------------------------------------------
 	// chunk system
-	int  onGetChunkLen (LongBool Preset);
-	void onGetChunk (void* chunk, LongBool Preset);
-	void onSetChunk (const void* chunk, int sizeInBytes, LongBool Preset);
+	//int  onGetChunkLen (LongBool Preset);
+	//void onGetChunk (void* chunk, LongBool Preset);
+	//void onSetChunk (const void* chunk, int sizeInBytes, LongBool Preset);
 
 	//-----------------------------------------------------------------------------
 	// layout
-	void onCreateSettings();
-	void onSettingsHasChanged();
-    //void onResize (float contentWidth, float contentHeight);
+	//void onCreateSettings();
+	//void onSettingsHasChanged();
     //void onCreateCommands();
-	void onPaint ();
+	//void onPaint ();
 
 	//-----------------------------------------------------------------------------
 	// mouse and multi touch interaction
-	void onMouseMove(TShiftState Shift, float X, float Y);
-	void onMouseDown(TMouseButton MouseButton, TShiftState Shift, float X,float Y);
-	void onMouseUp (TMouseButton MouseButton, TShiftState Shift, float X,float Y);
-	void onMouseMoveMultiProc(TShiftState Shift, UsineEventPtr X, UsineEventPtr Y);
-	void onMouseDownMultiProc(TMouseButton MouseButton, TShiftState Shift, UsineEventPtr X, UsineEventPtr Y);
-	void onMouseUpMultiProc (TMouseButton MouseButton, TShiftState Shift,UsineEventPtr X, UsineEventPtr Y);
-	void onOpenEditor();
-	void onBringToFront();
+	//void onMouseMove(TShiftState Shift, float X, float Y);
+	//void onMouseDown(TMouseButton MouseButton, TShiftState Shift, float X,float Y);
+	//void onMouseUp (TMouseButton MouseButton, TShiftState Shift, float X,float Y);
+	//void onMouseMoveMultiProc(TShiftState Shift, UsineEventPtr X, UsineEventPtr Y);
+	//void onMouseDownMultiProc(TMouseButton MouseButton, TShiftState Shift, UsineEventPtr X, UsineEventPtr Y);
+	//void onMouseUpMultiProc (TMouseButton MouseButton, TShiftState Shift,UsineEventPtr X, UsineEventPtr Y);
+	//void onOpenEditor();
+	//void onBringToFront();
 
 	//-----------------------------------------------------------------------------
 	// audio setup update
-	void onBlocSizeChange (int BlocSize);
-	void onSampleRateChange (double SampleRate);
+	//void onBlocSizeChange (int BlocSize);
+	//void onSampleRateChange (double SampleRate);
 	
 	//-----------------------------------------------------------------------------
 	// recording 
-	void onSetRecordedValue (TPrecision X, TPrecision Y, TPrecision Z);
-
+	// void onSetRecordedValue (TPrecision X, TPrecision Y, TPrecision Z);
+	
 	//-------------------------------------------------------------------------
-	// public methodes
+	// private members
 	//-------------------------------------------------------------------------
-public:
-
-    // public methodes goes here
-
+private:
 	//-------------------------------------------------------------------------
-	// protected members
-	//-------------------------------------------------------------------------
-protected:
-	//-------------------------------------------------------------------------
-	// parameters events : 
-	UsineEventPtr m_L1;       // pendulum 1 length
-	UsineEventPtr m_friction;      
-	UsineEventPtr m_gravity;  
-	//UsineEventPtr m_gravityAngle;
-	UsineEventPtr m_resetValue;
-	//UsineEventPtr m_reset; 
-	UsineEventPtr m_clockIn;
-	UsineEventPtr m_M1posx;  
-	UsineEventPtr m_M1posy;
-	UsineEventPtr m_OffSetM1posx;
-	UsineEventPtr m_OffSetM1posy;
-    // protected members goes here
-	const float centerx = 0.5;
-	const float centery = 0.5;             //anchor point of the pendulum
-	float gravityAngle = 0;
-	float gravityCorrection = 0;
-	float prev_gravityCorrection = 0;
-	int token1 = 1;
-	float dx[4];    //for storing the value of the state function at the current state
-
+	// parameters events
+	UsineEventPtr midiIn;
+	UsineEventPtr midiOut;
+    
+    UsineEventPtr encoderParams[8];
+    	
 	//-------------------------------------------------------------------------
 	// private methodes
 	//-------------------------------------------------------------------------
-private:  
+private:	
+	//-------------------------------------------------------------------------
+	//RGB 
+	void updateRgbaFromColorChooser();
+	// ColorChooser
+	void updateColorChooserFromRgba();
 
-    // private methodes goes here
+}; // class TouchEncoders
 
-}; // class TemplateModule
-
-#endif //__DOUBLE_PENDULUM_MODULE_H__
+#endif //__RGBA_COLOR_MODULE_H__
