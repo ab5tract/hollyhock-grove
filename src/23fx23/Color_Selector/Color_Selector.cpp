@@ -185,7 +185,7 @@ std::string int_to_hex(T i)
 void Color_Selector::GET_FINAL_COLOR()
 {
 	FINAL_COLOR = sdkColorAhslToAlphaColor(sdkColorAhsl(SEL_HUE, SEL_SAT, SEL_LUM));
-	long int FINAL_COLOR_VALUE = long int(FINAL_COLOR);
+	long int FINAL_COLOR_VALUE = long(int(FINAL_COLOR));
 	TxtColorHex = int_to_hex(FINAL_COLOR_VALUE);
 	sdkSetEvtColor(pColorOut, FINAL_COLOR);
 	sdkSetEvtPChar(pColorHex, AnsiCharPtr(TxtColorHex.c_str()));
