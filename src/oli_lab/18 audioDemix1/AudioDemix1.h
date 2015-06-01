@@ -58,7 +58,7 @@
 // defines and constantes
 //-----------------------------------------------------------------------------
 #define AUDIO_INS_OUTS_MAX 64
-
+const float SMOOTH = 0.99f;
 //-----------------------------------------------------------------------------
 // class definition
 //-----------------------------------------------------------------------------
@@ -111,6 +111,11 @@ private:
 	UsineEventPtr attenuation2;
 	UsineEventPtr overlapping;
 
+	UsineEventPtr m_tevtSmoothCurrentCoeff1;
+	UsineEventPtr m_tevtSmoothCurrentCoeff2;
+	// for audio smooth
+	TPrecision m_smoothOldCoeff1;
+	TPrecision m_smoothOldCoeff2;
 	//-------------------------------------------------------------------------
     static const int numOfParamAfterAudiotInOut = 5;
 

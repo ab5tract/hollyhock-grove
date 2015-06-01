@@ -97,7 +97,7 @@
     <IntDir>C:\temp\VC++\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>.\module</OutDir>
+    <OutDir>.\module\</OutDir>
     <IntDir>C:\temp\VC++\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

@@ -58,7 +58,7 @@
 // defines and constantes
 //-----------------------------------------------------------------------------
 #define AUDIO_INS_OUTS_MAX 64
-
+const float SMOOTH = 0.99f;
 //-----------------------------------------------------------------------------
 // class definition
 //-----------------------------------------------------------------------------
@@ -107,7 +107,9 @@ private:
 	UsineEventPtr fdrGain;
 	UsineEventPtr switchMute;
 	TPrecision tempValue;
-
+	UsineEventPtr m_tevtSmoothCurrentCoeff;
+	// for audio smooth
+	TPrecision m_smoothOldCoeff;
 	//-------------------------------------------------------------------------
     static const int numOfParamAfterAudiotInOut = 2;
 

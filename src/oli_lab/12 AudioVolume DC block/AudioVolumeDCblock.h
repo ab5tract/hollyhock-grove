@@ -58,7 +58,8 @@
 // defines and constantes
 //-----------------------------------------------------------------------------
 #define AUDIO_INS_OUTS_MAX 64
-
+const float SMOOTH = 0.99f;
+//const float SMOOTH_FAST = 0.11f;
 //-----------------------------------------------------------------------------
 // class definition
 //-----------------------------------------------------------------------------
@@ -108,6 +109,9 @@ private:
 	TPrecision audioOutputsM1[AUDIO_INS_OUTS_MAX];    // audio output at t-1
 	UsineEventPtr fdrGain;
 	UsineEventPtr switchMute;
+	UsineEventPtr m_tevtSmoothCurrentCoeff;
+	// for audio smooth
+	TPrecision m_smoothOldCoeff;
 	
 
 	//-------------------------------------------------------------------------

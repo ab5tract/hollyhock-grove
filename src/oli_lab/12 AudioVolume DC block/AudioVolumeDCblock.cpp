@@ -66,6 +66,7 @@ void DestroyModule(void* pModule)
 {
 	// cast is important to call the good destructor
 	delete ((AudioVolumeDCblock*)pModule);
+
 }
 
 //-------------------------------------------------------------------------
@@ -76,13 +77,15 @@ void DestroyModule(void* pModule)
 AudioVolumeDCblock::AudioVolumeDCblock()
     : coeffGain (1)
 {
-	//
+	// audio smooth
+	m_tevtSmoothCurrentCoeff = NULL;
 }
 
 // destructor
 AudioVolumeDCblock::~AudioVolumeDCblock()
 {
-	// 
+	if (m_tevtSmoothCurrentCoeff != NULL)
+		sdkDestroyEvt(m_tevtSmoothCurrentCoeff);
 }
 
 void AudioVolumeDCblock::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo)
@@ -91,7 +94,7 @@ void AudioVolumeDCblock::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* p
 	pModuleInfo->Description		= "audio volume and DC blocker";
 	pModuleInfo->ModuleType         = mtSimple;
 	pModuleInfo->BackColor = sdkGetUsineColor(clInterfaceDesignModuleColor) + 0x101010;
-	pModuleInfo->Version			= "1.0";
+	pModuleInfo->Version			= "2.0";
     
 	// query for multi-channels
 	if (pMasterInfo != nullptr)
@@ -123,6 +126,7 @@ int AudioVolumeDCblock::onGetNumberOfParams (int queryIndex)
 // Called after the query popup
 void AudioVolumeDCblock::onAfterQuery (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo, int queryIndex)
 {
+	sdkCreateEvt(m_tevtSmoothCurrentCoeff, pMasterInfo->BlocSize);
 }
 
 
@@ -234,10 +238,12 @@ void AudioVolumeDCblock::onCallBack (UsineMessage *Message)
 
 void AudioVolumeDCblock::onProcess () 
 {
+	sdkSmoothEvent(m_smoothOldCoeff, m_tevtSmoothCurrentCoeff, coeffGain, SMOOTH);
 	for (int i = 0; i < numOfAudiotInsOuts; i++)
     {
 		sdkCopyEvt(audioInputs[i], audioOutputs[i]);
-		
+		//sdkClearAudioEvt(audioOutputs[i]);
+				
 		for (int j = 0; j < sdkGetEvtSize(audioOutputs[i]); j++)
 		{
 			audioOutputsM1[i] = 0.995f*audioOutputsM1[i] - audioInputsM1[i] + sdkGetEvtArrayData(audioInputs[i], j);
@@ -247,11 +253,7 @@ void AudioVolumeDCblock::onProcess ()
 			//xm1 = x;
 			//ym1 = y;
 		}
-		sdkMultEvt1(coeffGain, audioOutputs[i]);
 
-		
-
-
-
+			sdkMultEvt2Audio(m_tevtSmoothCurrentCoeff, audioOutputs[i]);
     }
 }

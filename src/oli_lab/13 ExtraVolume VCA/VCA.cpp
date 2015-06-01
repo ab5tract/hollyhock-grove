@@ -76,13 +76,15 @@ void DestroyModule(void* pModule)
 AudioVolumeExample::AudioVolumeExample()
     : coeffGain (1)
 {
-	//
+	// audio smooth
+	m_tevtSmoothCurrentCoeff = NULL;
 }
 
 // destructor
 AudioVolumeExample::~AudioVolumeExample()
 {
-	// 
+	if (m_tevtSmoothCurrentCoeff != NULL)
+		sdkDestroyEvt(m_tevtSmoothCurrentCoeff);
 }
 
 void AudioVolumeExample::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo)
@@ -90,8 +92,8 @@ void AudioVolumeExample::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* p
 	pModuleInfo->Name				= "VCA";
 	pModuleInfo->Description		= "linear VCA";
 	pModuleInfo->ModuleType         = mtSimple;
-	pModuleInfo->BackColor          = sdkGetUsineColor(clAudioModuleColor);
-	pModuleInfo->Version			= "1.0";
+	pModuleInfo->BackColor          = sdkGetUsineColor(clAudioModuleColor)+ 0x101010;
+	pModuleInfo->Version			= "2.0";
     
 	// query for multi-channels
 	if (pMasterInfo != nullptr)
@@ -123,6 +125,7 @@ int AudioVolumeExample::onGetNumberOfParams (int queryIndex)
 // Called after the query popup
 void AudioVolumeExample::onAfterQuery (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo, int queryIndex)
 {
+	sdkCreateEvt(m_tevtSmoothCurrentCoeff, pMasterInfo->BlocSize);
 }
 
 
@@ -238,10 +241,12 @@ void AudioVolumeExample::onCallBack (UsineMessage *Message)
 
 void AudioVolumeExample::onProcess () 
 {
+	//float tmp = std::pow(coeffGain, 4.0f);
+	sdkSmoothEvent(m_smoothOldCoeff, m_tevtSmoothCurrentCoeff, coeffGain, SMOOTH);
 	for (int i = 0; i < numOfAudiotInsOuts; i++)
     {
         sdkCopyEvt (audioInputs[i], audioOutputs[i]);
-        sdkMultEvt1 (coeffGain, audioOutputs[i]);
+	    sdkMultEvt2Audio(m_tevtSmoothCurrentCoeff, audioOutputs[i]);
 
 		//y = x / (1 + | x | )  softclipping formula
 		for (int j = 0; j < sdkGetEvtSize(audioOutputs[i]); j++)

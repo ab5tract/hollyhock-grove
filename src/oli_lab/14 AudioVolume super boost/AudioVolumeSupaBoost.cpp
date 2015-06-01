@@ -76,13 +76,15 @@ void DestroyModule(void* pModule)
 AudioVolumeExample::AudioVolumeExample()
     : coeffGain (1)
 {
-	//
+	// audio smooth
+	m_tevtSmoothCurrentCoeff = NULL;
 }
 
 // destructor
 AudioVolumeExample::~AudioVolumeExample()
 {
-	// 
+	if (m_tevtSmoothCurrentCoeff != NULL)
+	sdkDestroyEvt(m_tevtSmoothCurrentCoeff);
 }
 
 void AudioVolumeExample::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo)
@@ -91,7 +93,7 @@ void AudioVolumeExample::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* p
 	pModuleInfo->Description		= "supa booster with many gain";
 	pModuleInfo->ModuleType         = mtSimple;
 	pModuleInfo->BackColor          = sdkGetUsineColor(clAudioModuleColor);
-	pModuleInfo->Version			= "1.0";
+	pModuleInfo->Version			= "2.0";
 	pModuleInfo->DontProcess = FALSE;
     
 	// query for multi-channels
@@ -124,6 +126,7 @@ int AudioVolumeExample::onGetNumberOfParams (int queryIndex)
 // Called after the query popup
 void AudioVolumeExample::onAfterQuery (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo, int queryIndex)
 {
+	sdkCreateEvt(m_tevtSmoothCurrentCoeff, pMasterInfo->BlocSize);
 }
 
 
@@ -240,32 +243,18 @@ void AudioVolumeExample::onCallBack (UsineMessage *Message)
 
 void AudioVolumeExample::onProcess () 
 {
+	sdkSmoothEvent(m_smoothOldCoeff, m_tevtSmoothCurrentCoeff, coeffGain, SMOOTH);
 	for (int i = 0; i < numOfAudiotInsOuts; i++)
     {
         sdkCopyEvt (audioInputs[i], audioOutputs[i]);
-        sdkMultEvt1 (coeffGain, audioOutputs[i]);
 
+        //sdkMultEvt1 (coeffGain, audioOutputs[i]);
+		sdkMultEvt2Audio(m_tevtSmoothCurrentCoeff, audioOutputs[i]);
 		//y = x / (1 + | x | )  softclipping formula
 		for (int j = 0; j < sdkGetEvtSize(audioOutputs[i]); j++)
 		{
 			tempValue = sdkGetEvtArrayData(audioOutputs[i], j) / (1 + abs(sdkGetEvtArrayData(audioOutputs[i], j)));
 			sdkSetEvtArrayData(audioOutputs[i], j, tempValue);
 		}
-
-		/*
-		if (sdkGetEvtData(audioOutputs[i]) > 0.99f) {
-			sdkSetEvtData(audioOutputs[i], 0.99f);
-		}
-		else if (sdkGetEvtData(audioOutputs[i]) < -0.99f) {
-			sdkSetEvtData(audioOutputs[i], -0.99f);
-		}
-		*/
-
-		/*
-		// hard clipping
-		if (mixed > 1.0f) mixed = 1.0f;
-		if (mixed < -1.0f) mixed = -1.0f;
-		short outputSample = (short) (mixed * 32768.0f)
-		*/
     }
 }
