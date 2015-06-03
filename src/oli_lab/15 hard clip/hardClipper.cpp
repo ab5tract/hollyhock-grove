@@ -93,7 +93,7 @@ void AudioVolumeExample::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* p
 	pModuleInfo->Description		= "hard clipper with many gain";
 	pModuleInfo->ModuleType         = mtSimple;
 	pModuleInfo->BackColor          = sdkGetUsineColor(clAudioModuleColor);
-	pModuleInfo->Version			= "2.0";
+	pModuleInfo->Version			= "2.1";
 	pModuleInfo->DontProcess = FALSE;
     
 	// query for multi-channels

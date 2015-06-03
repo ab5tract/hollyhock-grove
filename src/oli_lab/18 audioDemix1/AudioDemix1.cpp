@@ -96,7 +96,7 @@ void AudioDemix::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* pModuleIn
 	pModuleInfo->Description		= "audio demix 1:2";
 	pModuleInfo->ModuleType         = mtSimple;
 	pModuleInfo->BackColor          = sdkGetUsineColor(clAudioModuleColor);
-	pModuleInfo->Version			= "2.0";
+	pModuleInfo->Version			= "2.1";
     
 	// query for multi-channels
 	if (pMasterInfo != nullptr)

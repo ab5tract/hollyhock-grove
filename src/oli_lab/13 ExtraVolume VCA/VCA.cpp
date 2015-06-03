@@ -74,7 +74,7 @@ void DestroyModule(void* pModule)
 
 // constructor
 AudioVolumeExample::AudioVolumeExample()
-    : coeffGain (1)
+    //: coeffGain (1)
 {
 	// audio smooth
 	m_tevtSmoothCurrentCoeff = NULL;
@@ -93,7 +93,7 @@ void AudioVolumeExample::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* p
 	pModuleInfo->Description		= "linear VCA";
 	pModuleInfo->ModuleType         = mtSimple;
 	pModuleInfo->BackColor          = sdkGetUsineColor(clAudioModuleColor)+ 0x101010;
-	pModuleInfo->Version			= "2.0";
+	pModuleInfo->Version			= "2.1";
     
 	// query for multi-channels
 	if (pMasterInfo != nullptr)
@@ -131,7 +131,13 @@ void AudioVolumeExample::onAfterQuery (MasterInfo* pMasterInfo, ModuleInfo* pMod
 
 //-----------------------------------------------------------------------------
 // initialisation
-void AudioVolumeExample::onInitModule (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo) {}
+void AudioVolumeExample::onInitModule (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo) 
+{
+	//coeffGain = 0;
+	//coeffGain = (sdkGetEvtData(fdrGain)) * (1.0f - sdkGetEvtData(switchMute));
+	//sdkSmoothEvent(m_smoothOldCoeff, m_tevtSmoothCurrentCoeff, coeffGain, 1);
+
+}
 
 //----------------------------------------------------------------------------
 // parameters and process
@@ -181,7 +187,7 @@ void AudioVolumeExample::onGetParamInfo (int ParamIndex, TParamInfo* pParamInfo)
         pParamInfo->IsSeparator     = TRUE;
 		pParamInfo->MaxValue = 100.0f;
 		pParamInfo->MinValue = 0.0f;
-		pParamInfo->DefaultValue = 0.5f;
+		pParamInfo->DefaultValue = 0.0f;
 		pParamInfo->Format = "%.4f";
         pParamInfo->CallBackType    = ctImmediate;
         pParamInfo->SeparatorCaption = "Volume";
@@ -245,8 +251,9 @@ void AudioVolumeExample::onProcess ()
 	sdkSmoothEvent(m_smoothOldCoeff, m_tevtSmoothCurrentCoeff, coeffGain, SMOOTH);
 	for (int i = 0; i < numOfAudiotInsOuts; i++)
     {
-        sdkCopyEvt (audioInputs[i], audioOutputs[i]);
-	    sdkMultEvt2Audio(m_tevtSmoothCurrentCoeff, audioOutputs[i]);
+		//sdkClearAudioEvt(audioOutputs[i]);
+		sdkCopyEvt (audioInputs[i], audioOutputs[i]);
+		sdkMultEvt2Audio(m_tevtSmoothCurrentCoeff, audioOutputs[i]);
 
 		//y = x / (1 + | x | )  softclipping formula
 		for (int j = 0; j < sdkGetEvtSize(audioOutputs[i]); j++)

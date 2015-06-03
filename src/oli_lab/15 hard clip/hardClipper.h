@@ -107,9 +107,10 @@ private:
 	UsineEventPtr fdrGain;
 	UsineEventPtr switchMute;
 	//TPrecision tempValue;
-	UsineEventPtr m_tevtSmoothCurrentCoeff;
+	
 	// for audio smooth
-	TPrecision m_smoothOldCoeff;
+	TPrecision m_smoothOldCoeff = 0;
+	UsineEventPtr m_tevtSmoothCurrentCoeff;
 	//-------------------------------------------------------------------------
     static const int numOfParamAfterAudiotInOut = 2;
 

@@ -111,11 +111,11 @@ private:
 	UsineEventPtr attenuation2;
 	UsineEventPtr overlapping;
 
+	// for audio smooth
+	TPrecision m_smoothOldCoeff1 = 0;
+	TPrecision m_smoothOldCoeff2 = 0;
 	UsineEventPtr m_tevtSmoothCurrentCoeff1;
 	UsineEventPtr m_tevtSmoothCurrentCoeff2;
-	// for audio smooth
-	TPrecision m_smoothOldCoeff1;
-	TPrecision m_smoothOldCoeff2;
 	//-------------------------------------------------------------------------
     static const int numOfParamAfterAudiotInOut = 5;
 

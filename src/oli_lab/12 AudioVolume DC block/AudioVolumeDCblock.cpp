@@ -94,7 +94,7 @@ void AudioVolumeDCblock::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* p
 	pModuleInfo->Description		= "audio volume and DC blocker";
 	pModuleInfo->ModuleType         = mtSimple;
 	pModuleInfo->BackColor = sdkGetUsineColor(clInterfaceDesignModuleColor) + 0x101010;
-	pModuleInfo->Version			= "2.0";
+	pModuleInfo->Version			= "2.1";
     
 	// query for multi-channels
 	if (pMasterInfo != nullptr)
