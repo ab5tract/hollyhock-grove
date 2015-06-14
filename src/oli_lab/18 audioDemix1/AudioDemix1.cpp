@@ -76,13 +76,18 @@ void DestroyModule(void* pModule)
 AudioDemix::AudioDemix()
     : Gain (1)
 {
-	//
+	// audio smooth
+	m_tevtSmoothCurrentCoeff1 = NULL;
+	m_tevtSmoothCurrentCoeff2 = NULL;
 }
 
 // destructor
 AudioDemix::~AudioDemix()
 {
-	// 
+	if (m_tevtSmoothCurrentCoeff1 != NULL)
+       sdkDestroyEvt(m_tevtSmoothCurrentCoeff1);
+	if (m_tevtSmoothCurrentCoeff2 != NULL)
+		sdkDestroyEvt(m_tevtSmoothCurrentCoeff2);
 }
 
 void AudioDemix::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo)
@@ -91,7 +96,7 @@ void AudioDemix::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* pModuleIn
 	pModuleInfo->Description		= "audio demix 1:2";
 	pModuleInfo->ModuleType         = mtSimple;
 	pModuleInfo->BackColor          = sdkGetUsineColor(clAudioModuleColor);
-	pModuleInfo->Version			= "1.0";
+	pModuleInfo->Version			= "2.1";
     
 	// query for multi-channels
 	if (pMasterInfo != nullptr)
@@ -123,6 +128,8 @@ int AudioDemix::onGetNumberOfParams (int queryIndex)
 // Called after the query popup
 void AudioDemix::onAfterQuery (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo, int queryIndex)
 {
+	sdkCreateEvt(m_tevtSmoothCurrentCoeff1, pMasterInfo->BlocSize);
+	sdkCreateEvt(m_tevtSmoothCurrentCoeff2, pMasterInfo->BlocSize);
 }
 
 
@@ -296,11 +303,11 @@ void AudioDemix::onCallBack (UsineMessage *Message)
 		{
 			Gain = sdkGetEvtData(fdrGain);
 			mute = (1 - sdkGetEvtData(switchMute));
-			Gain1 = (1 - Gain) * 1.0001 / (1.0001 - sdkGetEvtData(overlapping));
+			Gain1 = (1 - Gain) * 1.0001f / (1.0001f - sdkGetEvtData(overlapping));
 			if (Gain1 > 1) {
 				Gain1 = 1;
 			}
-			Gain2 = Gain*1.0001 / (1.0001 - sdkGetEvtData(overlapping));
+			Gain2 = Gain*1.0001f / (1.0001f - sdkGetEvtData(overlapping));
 			if (Gain2 > 1) {
 				Gain2 = 1;
 			}
@@ -312,11 +319,15 @@ void AudioDemix::onCallBack (UsineMessage *Message)
 
 void AudioDemix::onProcess () 
 {
+	sdkSmoothEvent(m_smoothOldCoeff1, m_tevtSmoothCurrentCoeff1, Gain1, SMOOTH);
+	sdkSmoothEvent(m_smoothOldCoeff2, m_tevtSmoothCurrentCoeff2, Gain2, SMOOTH);
 	for (int i = 0; i < numOfAudiotInsOuts; i++)
     {
         sdkCopyEvt (audioInputs[i], audioOutputs1[i]);
-        sdkMultEvt1 (Gain1, audioOutputs1[i]);
+        //sdkMultEvt1 (Gain1, audioOutputs1[i]);
+		sdkMultEvt2Audio(m_tevtSmoothCurrentCoeff1, audioOutputs1[i]);
 		sdkCopyEvt(audioInputs[i], audioOutputs2[i]);
-		sdkMultEvt1(Gain2, audioOutputs2[i]);
+		//sdkMultEvt1(Gain2, audioOutputs2[i]);
+		sdkMultEvt2Audio(m_tevtSmoothCurrentCoeff2, audioOutputs2[i]);
     }
 }

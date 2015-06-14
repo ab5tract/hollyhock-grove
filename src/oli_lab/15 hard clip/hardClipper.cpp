@@ -76,13 +76,15 @@ void DestroyModule(void* pModule)
 AudioVolumeExample::AudioVolumeExample()
     : coeffGain (1)
 {
-	//
+	// audio smooth
+	m_tevtSmoothCurrentCoeff = NULL;
 }
 
 // destructor
 AudioVolumeExample::~AudioVolumeExample()
 {
-	// 
+	if (m_tevtSmoothCurrentCoeff != NULL)
+		sdkDestroyEvt(m_tevtSmoothCurrentCoeff);
 }
 
 void AudioVolumeExample::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo)
@@ -91,7 +93,7 @@ void AudioVolumeExample::onGetModuleInfo (MasterInfo* pMasterInfo, ModuleInfo* p
 	pModuleInfo->Description		= "hard clipper with many gain";
 	pModuleInfo->ModuleType         = mtSimple;
 	pModuleInfo->BackColor          = sdkGetUsineColor(clAudioModuleColor);
-	pModuleInfo->Version			= "1.0";
+	pModuleInfo->Version			= "2.1";
 	pModuleInfo->DontProcess = FALSE;
     
 	// query for multi-channels
@@ -124,6 +126,7 @@ int AudioVolumeExample::onGetNumberOfParams (int queryIndex)
 // Called after the query popup
 void AudioVolumeExample::onAfterQuery (MasterInfo* pMasterInfo, ModuleInfo* pModuleInfo, int queryIndex)
 {
+	sdkCreateEvt(m_tevtSmoothCurrentCoeff, pMasterInfo->BlocSize);
 }
 
 
@@ -240,12 +243,11 @@ void AudioVolumeExample::onCallBack (UsineMessage *Message)
 
 void AudioVolumeExample::onProcess()
 {
+	sdkSmoothEvent(m_smoothOldCoeff, m_tevtSmoothCurrentCoeff, coeffGain, SMOOTH);
 	for (int i = 0; i < numOfAudiotInsOuts; i++)
 	{
 		sdkCopyEvt(audioInputs[i], audioOutputs[i]);
-		sdkMultEvt1(coeffGain, audioOutputs[i]);
-
-		//y = x / (1 + | x | )  softclipping formula
+		sdkMultEvt2Audio(m_tevtSmoothCurrentCoeff, audioOutputs[i]);
 		for (int j = 0; j < sdkGetEvtSize(audioOutputs[i]); j++)
 		{
 			if (sdkGetEvtArrayData(audioOutputs[i], j) > 0.99f) {

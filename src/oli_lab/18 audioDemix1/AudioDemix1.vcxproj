@@ -34,7 +34,7 @@
     <ProjectGuid>{7CC44A31-FF62-405B-9B64-69AC50ACDD50}</ProjectGuid>
     <RootNamespace>UserModule</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>AudioDemix1</ProjectName>
+    <ProjectName>AudioDemix2</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -83,7 +83,7 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\temp\VC++\$(Configuration)\$(ProjectName)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\temp\VC++\$(Configuration)\$(ProjectName)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\module</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\temp\VC++\$(Configuration)\$(ProjectName)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
@@ -93,7 +93,7 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.usr-win64</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>C:\temp\VC++\$(Configuration)\$(ProjectName)\</OutDir>
+    <OutDir>.\module</OutDir>
     <IntDir>C:\temp\VC++\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
